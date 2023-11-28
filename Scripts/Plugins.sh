@@ -14,6 +14,10 @@ git clone --depth=1 --single-branch https://github.com/xiaorouji/openwrt-passwal
 git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
 #Hello World
 git clone --depth=1 --single-branch --branch "main" https://github.com/fw876/helloworld.git
+#mosdns
+git clone --depth=1 --single-branch --branch "v5" https://github.com/sbwml/luci-app-mosdns.git
+#adguardhome
+git clone --depth=1 --single-branch https://github.com/chenmozhijin/luci-app-adguardhome.git
 #Home Proxy
 if [[ $OWRT_URL == *"immortalwrt"* ]] ; then
   git clone --depth=1 --single-branch --branch "dev" https://github.com/immortalwrt/homeproxy.git
