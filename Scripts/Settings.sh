@@ -12,9 +12,6 @@ sed -i "s/hostname='.*'/hostname='OpenWrt'/g" ./package/base-files/files/bin/con
 sed -i "s/timezone='.*'/timezone='CST-8'/g" ./package/base-files/files/bin/config_generate
 sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" ./package/base-files/files/bin/config_generate
 #修改版本为编译日期
-date_version=$(date +"%y.%m.%d")
-orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
-sed -i "s/${orig_version}/R${date_version} by Masaaki/g" package/lean/default-settings/files/zzz-default-settings
 
 #根据源码来修改
 if [[ $OWRT_URL == *"lede"* ]] ; then
