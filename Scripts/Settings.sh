@@ -14,7 +14,7 @@ sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" 
 #修改版本为编译日期
 #cp -f feeds/smpackage/.github/diy/banner package/base-files/files/etc/banner
 #sed -i "s/%D %V, %C/openwrt $(date +'%m.%d') by Masaaki/g" package/base-files/files/etc/banner
-sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='OpenWrt-$(date +%Y%m%d) by Masaaki @'/g"  package/base-files/files/etc/openwrt_release
+sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='ImmortalWrt by Masaaki'/g"  package/base-files/files/etc/openwrt_release
 
 #根据源码来修改
 if [[ $OWRT_URL == *"lede"* ]] ; then
