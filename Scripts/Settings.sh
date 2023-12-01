@@ -7,7 +7,7 @@ rm -rf $(find ./feeds/luci/ -type d -iregex ".*\(argon\|adguardhome\|mosdns\|des
 #修改默认IP地址
 sed -i "s/192\.168\.[0-9]*\.[0-9]*/192.168.1.11/g" ./package/base-files/files/bin/config_generate
 #修改默认主机名
-sed -i "s/hostname='.*'/hostname='OpenWrt'/g" ./package/base-files/files/bin/config_generate
+sed -i "s/hostname='.*'/hostname='ImmortalWrt'/g" ./package/base-files/files/bin/config_generate
 #修改默认时区
 sed -i "s/timezone='.*'/timezone='CST-8'/g" ./package/base-files/files/bin/config_generate
 sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" ./package/base-files/files/bin/config_generate
